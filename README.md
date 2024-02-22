@@ -1,4 +1,4 @@
-# voip2
+# Voice over IP 2
 
 A short course on the integration of VoIP services (Asterisk primarily, Kamailio optionally) with other key elements of the information system environment, such as database (PostgreSQL) and HTTPS API for management.
 
