@@ -6,4 +6,4 @@ The whole setup is dockerized to allow simple deployment.
 
 The high level architecture is depicted in the following figure:
 
-![Topology](fig/voip2_basic diagram.drawio.png)
+![Topology](/fig/voip2_basic diagram.drawio.png)
