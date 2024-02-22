@@ -6,4 +6,4 @@ The whole setup is dockerized to allow simple deployment.
 
 The high level architecture is depicted in the following figure:
 
-![Topology](https://github.com/jrozhon/voip2/blob/main/fig/voip2_basic%20diagram.drawio.png)https://github.com/jrozhon/voip2/blob/main/fig/voip2_basic%20diagram.drawio.png)
+![Topology](https://github.com/jrozhon/voip2/blob/main/fig/voip2_basic%20diagram.drawio.png)
