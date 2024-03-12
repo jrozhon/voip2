@@ -1,0 +1,43 @@
+version: '3.9'
+
+services:
+
+  asterisk:
+    build:
+      context: ./asterisk
+      args:
+        - db_url=postgresql://$POSTGRES_USER:$POSTGRES_PASSWORD@database:5432/$POSTGRES_DB
+    depends_on:
+      - database
+    volumes:
+      - ./asterisk/etc/asterisk:/etc/asterisk
+      - ./asterisk/etc/odbc.ini:/etc/odbc.ini
+      - ./asterisk/etc/odbcinst.ini:/etc/odbcinst.ini
+    ports:
+      - 5060:5060/UDP
+      - 10000-10100:10000-10100/UDP
+    networks:
+      - net
+
+  database:
+    build:
+      context: ./postgres
+    expose:
+      - 5432
+    # enable access to postgres externally (possibly for backups)
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=$POSTGRES_USER
+      - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
+      - POSTGRES_DB=$POSTGRES_DB
+      - DB_USER=$DB_USER
+      - DB_PASS=$DB_PASS
+    volumes:
+      - /database:/var/lib/postgresql/data
+    networks:
+      - net
+
+networks:
+  net:
+
