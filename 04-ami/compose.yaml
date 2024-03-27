@@ -14,6 +14,7 @@ services:
       - ./asterisk/etc/odbc.ini:/etc/odbc.ini
       - ./asterisk/etc/odbcinst.ini:/etc/odbcinst.ini
     ports:
+      - 5038:5038
       - 5060:5060/UDP
       - 10000-10100:10000-10100/UDP
     networks:

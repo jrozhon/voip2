@@ -123,4 +123,4 @@ RUN chown -R asterisk:asterisk  /etc/asterisk
 WORKDIR /home/asterisk
 USER asterisk
 
-CMD asterisk -f
+CMD asterisk -vvvvvf
