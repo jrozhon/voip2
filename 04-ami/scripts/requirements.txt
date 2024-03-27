@@ -1,0 +1,2 @@
+asterisk-ami==0.1.7
+click==8.1.7
